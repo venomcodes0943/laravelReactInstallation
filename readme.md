@@ -42,13 +42,13 @@ npm install react react-dom @vitejs/plugin-react
 
 setup the Inertia middleware
 
-```sh
+```php
 php artisan inertia:middleware
 ```
 
 add this in your bootstrap/app.php
 
-```sh
+```php
 use App\Http\Middleware\HandleInertiaRequests;
 
 ->withMiddleware(function (Middleware $middleware) {
@@ -68,7 +68,7 @@ npm install --save-dev laravel-vite-plugin
 
 Create or update vite.config.js
 
-```sh
+```js
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import react from '@vitejs/plugin-react';
@@ -87,11 +87,11 @@ export default defineConfig({
 
 ### Set Up Your React Application
 
-> Go to the `resources/js` change `app.js` to `app.jsx`
+Go to the `resources/js` change `app.js` to `app.jsx`
 
 Paste this in `app.jsx`
 
-```sh
+```jsx
 import { createInertiaApp } from "@inertiajs/react";
 import { createRoot } from "react-dom/client";
 
@@ -108,7 +108,7 @@ createInertiaApp({
 
 Create a sample Inertia page in `resources/js/Pages/Home.jsx`
 
-```sh
+```jsx
 import React from 'react';
 
 const Home = () => {
@@ -126,7 +126,7 @@ Create a route to serve the Inertia page
 
 Update `routes/web.php`
 
-```sh
+```php
 use Inertia\Inertia;
 
 Route::get('/', function () {
@@ -138,7 +138,7 @@ Update your `welcome.blade.php` to `app.blade.php`
 
 paste this all in `app.blade.php`
 
-```sh
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
